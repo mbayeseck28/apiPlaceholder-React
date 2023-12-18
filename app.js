@@ -11,7 +11,9 @@ class Tbody extends React.Component {
           <tr key={todo.id}>
             <td>{todo.id}</td>
             <td>{todo.title}</td>
-            <td>{todo.completed}</td>
+            <td className="bg-primary text-white text-center">
+              {todo.completed ? 'True' : 'False'}
+            </td>
           </tr>
         ))}
       </tbody>
@@ -35,6 +37,7 @@ class Tableau extends React.Component {
             <tr className="border border-black border-start-0 border-top-0 border-end-0 border-1">
               <td className="fw-bold p-2 ">Id</td>
               <td className="fw-bold p-2 ">Todo</td>
+              <td className="fw-bold p-2 ">Completed</td>
             </tr>
           </thead>
           <Tbody table={this.props.table} />
